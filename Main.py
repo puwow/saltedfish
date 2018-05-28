@@ -13,6 +13,7 @@ api = Api( app )
 
 #users资源
 #列出所有用户
+api.add_resource( UserResource.UserListResource, '/api/v1/users' )
 api.add_resource( UserResource.UserResource, '/api/v1/users/<string:username>' )
 flask_restful.abort = custom_abort
 
